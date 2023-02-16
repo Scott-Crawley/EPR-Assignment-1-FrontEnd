@@ -7,13 +7,19 @@ import Icon from 'ol/style/Icon';
 import OSM from 'ol/source/OSM';
 import * as olProj from 'ol/proj';
 import TileLayer from 'ol/layer/Tile';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
   styleUrls: ['./booking.component.css']
 })
+
 export class BookingComponent {
+
+  constructor(private router: Router){
+  }
+
   map:any;
   ngOnInit(){
     this.map = new Map({
@@ -25,9 +31,13 @@ export class BookingComponent {
       ],
       view: new View({
         center: olProj.fromLonLat([-0.09025626478804594,51.51724909030454]),
-        zoom: 17
+        zoom: 18
       })
     });
+  }
+
+  goToPage(pageName:string){
+    this.router.navigate([`${pageName}`]);
   }
   
 }
