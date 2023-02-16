@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<body class="text-center">
+  <main class="form-signin w-100 m-auto">
+    <form #loginform="ngForm">
+      <img class="mb-4" src="assets\Ride-It.png" alt="">
+      <h1 class="h3 mb-3 fw-normal">Please Sign In</h1>
+      <div class="form-floating">
+        <input type="data" class="form-control" name = "password" placeholder="Password">
+        <label for="floatingInput">First Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="data" class="form-control" name = "lastname" placeholder="Last Name">
+        <label for="floatingInput">Last Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="data" class="form-control" name = "dob" placeholder="Date of Birth">
+        <label for="floatingInput">Date of Birth</label>
+      </div>
+      <div class="form-floating">
+        <input type="data" class="form-control" name = "username" placeholder="Username">
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <input type="data" class="form-control" name = "password" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="checkbox mb-3">
+        <small [routerLink]="['/registration']"><a href="/">Got an account? Sign In
+            here!</a></small>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary btn-outline-light" [disabled]="loginform.form.invalid" type="submit">Sign Up</button>
+      <p class="mt-5 mb-3 text-muted">&copy; Made by James, Morgan & Scott</p>
+    </form>
+  </main>
+</body>
+</html>

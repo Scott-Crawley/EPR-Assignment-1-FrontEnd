@@ -1,0 +1,26 @@
+* { border: 1px solid red; }
+
+
+#map {
+    position: absolute;
+    left: 0;
+    width: 400px;
+    height: 75%;
+}
+
+
+.booking{
+    position: absolute;
+    right: 0;
+}
+
+.booking .resize {
+    width: 300px;
+    height: auto;
+}
+
+.booking .location{
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
